@@ -1,0 +1,3 @@
+- Update navbar in about.html to match index.html's navbar structure
+- Update navbar in contact.html to match index.html's navbar structure
+- Update brand name from Polychroma to GenZ Fashion Collective in about.html and contact.html

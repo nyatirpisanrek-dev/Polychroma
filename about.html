@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tentang — GenZ Fashion Collective</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{ --muted:#6b7280; --text:#0f172a; --primary:#0b84ff; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;color:var(--text);-webkit-font-smoothing:antialiased;background:#f7fbff;}
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:32px auto;padding:28px;border-radius:12px;background:#fff;box-shadow:0 10px 30px rgba(12,18,30,0.05)}
+    /* header styles kept consistent with index */
+    .nav{position:sticky;top:0;background:rgba(255,255,255,0.95);border-bottom:1px solid rgba(0,0,0,0.04);z-index:40}
+    .nav-inner{display:flex;align-items:center;gap:16px;padding:12px 20px;max-width:1200px;margin:0 auto}
+    .logo{font-weight:700;font-size:18px}
+    .nav-links{display:flex;gap:12px;margin-left:12px}
+    .nav-links a{padding:8px 10px;border-radius:10px;color:var(--muted);font-weight:600;text-decoration:none}
+    .nav-links.open{display:flex;flex-direction:column;position:fixed;left:16px;right:16px;top:68px;background:rgba(255,255,255,0.98);padding:12px;border-radius:12px;gap:8px;box-shadow:0 20px 40px rgba(3,7,18,0.12)}
+    @media(min-width:641px){ .nav-links.open{position:static;flex-direction:row;background:transparent;padding:0;gap:12px} }
+    .search{margin-left:auto}
+    .icon-btn{background:transparent;border:1px solid rgba(0,0,0,0.04);padding:8px;border-radius:10px;cursor:pointer}
+    .badge{font-size:12px;margin-left:6px;font-weight:700}
+    h1{margin:0 0 8px 0}
+    .section{padding:20px}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header class="nav" role="banner">
+    <div class="nav-inner">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit">Polychroma</a></div>
+        <nav class="nav-links" aria-label="Navigasi utama">
+          <a href="index.html">Beranda</a>
+          <a href="about.html">Tentang</a>
+        </nav>
+      </div>
+
+      <div class="search" role="search">
+        <input id="searchInputLocal" type="search" placeholder="Cari..." aria-label="Search" style="padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+      </div>
+
+      <div style="display:flex;gap:8px;align-items:center;margin-left:12px">
+        <button id="mobileMenuBtn" class="icon-btn" aria-label="Menu">☰</button>
+        <button id="wishlistBtn" class="icon-btn" aria-label="Wishlist">♡ <span id="wishCount" class="badge">0</span></button>
+        <button id="cartBtn" class="icon-btn" aria-label="Open cart">🛒 <span id="cartCount" class="badge">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <!-- Hanya tampilkan Kontak sesuai permintaan -->
+    <section class="section" aria-label="Kontak dan Outlet">
+      <h1>Kontak & Outlet</h1>
+      <p class="muted">Semua informasi kontak dan outlet di halaman ini telah diganti menjadi:</p>
+      <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
+        <div><strong>Nama:</strong> Muh. Affan Dzakwan</div>
+        <div><strong>Nama:</strong> Fikri Nakhla Rafie</div>
+        <div><strong>Instagram:</strong> <a href="https://instagram.com/mhmmdaffandza_" target="_blank" rel="noopener noreferrer">@mhmmdaffandza_</a></div>
+        <div><strong>Instagram:</strong> <a href="https://instagram.com/rafie_328" target="_blank" rel="noopener noreferrer">@rafie_328</a></div>
+        <div><strong>Kelas:</strong> X DBP 1</div>
+      </div>
+      <p class="muted" style="margin-top:12px">Hubungi via Instagram untuk pertanyaan terkait proyek ini.</p>
+    </section>
+
+    <!-- Panduan Lengkap Pembuatan Website -->
+    <section class="section" aria-label="Panduan Pembuatan Website">
+      <h2 style="margin-top:0">Panduan Lengkap Pembuatan Website</h2>
+      <p class="muted">Panduan langkah demi langkah dari perencanaan awal hingga deployment dan pemeliharaan.</p>
+
+      <ol style="margin-top:12px;color:var(--muted);line-height:1.6">
+        <li><strong>Perencanaan & Riset</strong>
+          <ul>
+            <li>Tentukan tujuan situs (branding, penjualan, katalog, portofolio).</li>
+            <li>Identifikasi audiens target dan kebutuhan fungsional (fitur utama).</li>
+            <li>Lakukan riset kompetitor dan referensi desain.</li>
+            <li>Buat daftar requirement: konten, halaman, integrasi (payment, analytics).</li>
+          </ul>
+        </li>
+
+        <li><strong>Arsitektur Informasi & Wireframe</strong>
+          <ul>
+            <li>Susun sitemap: halaman utama, kategori, produk, tentang, kontak, kebijakan.</li>
+            <li>Buat wireframe low-fidelity untuk tiap halaman utama.</li>
+            <li>Validasi flow user (navigasi, checkout, formulir).</li>
+          </ul>
+        </li>
+
+        <li><strong>Desain UI / Visual</strong>
+          <ul>
+            <li>Tentukan sistem desain: palet warna, tipografi, spacing, komponen (buttons, cards).</li>
+            <li>Buat mockup hi-fidelity (Figma/Sketch) untuk hero, kartu produk, detail produk, header, footer.</li>
+            <li>Perhatikan kontras warna, ukuran huruf, dan konsistensi ikonografi.</li>
+          </ul>
+        </li>
+
+        <li><strong>Persiapan Asset</strong>
+          <ul>
+            <li>Kumpulkan foto produk berkualitas, logo, SVG/ikon, dan font yang diizinkan.</li>
+            <li>Optimalkan gambar (resize, kompresi, next-gen formats seperti WebP bila memungkinkan).</li>
+          </ul>
+        </li>
+
+        <li><strong>Setup Proyek & Versi Kontrol</strong>
+          <ul>
+            <li>Siapkan repositori Git. Buat cabang (branch) untuk development.</li>
+            <li>Inisialisasi struktur folder (html, css, js, assets).</li>
+            <li>Gunakan package manager (npm) bila ada build tools.</li>
+          </ul>
+        </li>
+
+        <li><strong>Implementasi Front-end</strong>
+          <ul>
+            <li>Tulis HTML semantik untuk header, main, footer, section.</li>
+            <li>Gunakan CSS modular (variables, utility classes) dan responsive grid.</li>
+            <li>Tambahkan interaksi dengan JavaScript: rendering produk, filter, search, modal, cart.</li>
+            <li>Pastikan progressive enhancement: situs bekerja tanpa JS dasar.</li>
+          </ul>
+        </li>
+
+        <li><strong>Aksesibilitas & Responsiveness</strong>
+          <ul>
+            <li>Gunakan role/aria attributes pada komponen interaktif.</li>
+            <li>Pastikan navigasi keyboard, fokus yang jelas, dan teks alternatif pada gambar.</li>
+            <li>Uji pada berbagai ukuran layar (mobile, tablet, desktop).</li>
+          </ul>
+        </li>
+
+        <li><strong>Testing</strong>
+          <ul>
+            <li>Fungsional: formulir, pencarian, proses keranjang.</li>
+            <li>Visual: cross-browser check (Chrome, Firefox, Safari).</li>
+            <li>Performance: audit Lighthouse (load time, bundle size).</li>
+            <li>Security: validasi input, sanitasi data, HTTPS.</li>
+          </ul>
+        </li>
+
+        <li><strong>Optimasi & SEO</strong>
+          <ul>
+            <li>Optimalkan meta tags (title, description), structured data (JSON-LD) bila perlu.</li>
+            <li>Gunakan teknik lazy-loading untuk gambar, minify CSS/JS, caching.</li>
+          </ul>
+        </li>
+
+        <li><strong>Build & Deploy</strong>
+          <ul>
+            <li>Siapkan script build (minify, bundle) bila menggunakan bundler.</li>
+            <li>Pilih hosting: GitHub Pages, Netlify, Vercel, atau server sendiri.</li>
+            <li>Konfigurasikan domain, SSL, dan redirect (jika perlu).</li>
+          </ul>
+        </li>
+
+        <li><strong>Monitoring & Maintenance</strong>
+          <ul>
+            <li>Pasang analytics (Google Analytics, Plausible) untuk memantau trafik.</li>
+            <li>Backup data, perbarui dependensi, dan perbaiki bug secara berkala.</li>
+            <li>Kumpulkan feedback pengguna untuk iterasi desain dan fitur.</li>
+          </ul>
+        </li>
+
+        <li><strong>Praktik Pengembangan yang Direkomendasikan</strong>
+          <ul>
+            <li>Gunakan Git + PR workflow untuk kolaborasi.</li>
+            <li>Automasi testing dan deploy (CI/CD) untuk kualitas dan kecepatan rilis.</li>
+            <li>Dokumentasikan komponen dan pola desain untuk konsistensi.</li>
+            <li>Perhatikan privasi pengguna (GDPR/POPI/Peraturan lokal).</li>
+          </ul>
+        </li>
+      </ol>
+
+      <p class="muted" style="margin-top:12px">Butuh versi checklist yang bisa diunduh (PDF) atau template Figma? Saya bisa tambahkan contoh checklist dan pautan alat rekomendasi jika Anda mau.</p>
+    </section>
+
+    <footer style="margin-top:18px">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div style="font-weight:700">Polychroma</div>
+        <div class="muted">© <span id="year-about"></span> • Pengembalian gratis • Netral karbon</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // aktifkan highlighting nav, toggle mobile menu, wishlist count, dan redirect pencarian ke index
+    (function(){
+      const links = document.querySelectorAll('.nav-links a');
+      const current = location.pathname.split('/').pop() || 'index.html';
+      links.forEach(a=>{
+        const href = a.getAttribute('href');
+        if(href === current || (href === 'index.html' && (current === '' || current === 'index.html'))){
+          a.classList.add('active-nav'); a.setAttribute('aria-current','page');
+        } else { a.classList.remove('active-nav'); a.removeAttribute('aria-current'); }
+      });
+
+      const mbtn = document.getElementById('mobileMenuBtn');
+      if(mbtn) mbtn.addEventListener('click', ()=> document.querySelector('.nav-links').classList.toggle('open'));
+
+      try{
+        const arr = JSON.parse(localStorage.getItem('polychroma_wishlist') || '[]');
+        const el = document.getElementById('wishCount');
+        if(el) el.textContent = Array.isArray(arr) ? arr.length : 0;
+      }catch(e){}
+
+      const s = document.getElementById('searchInputLocal');
+      if(s){
+        s.addEventListener('keydown', (e)=>{
+          if(e.key === 'Enter'){
+            const q = s.value.trim();
+            if(q) location.href = 'index.html?q=' + encodeURIComponent(q);
+          }
+        });
+      }
+
+      // set year
+      document.getElementById('year-about').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

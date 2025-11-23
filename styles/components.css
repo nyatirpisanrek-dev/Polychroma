@@ -1,0 +1,28 @@
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 24px;border-radius:var(--radius-pill);border:1px solid transparent;cursor:pointer;font-weight:500;font-size:1.05rem;letter-spacing:0.025em;transition:all var(--dur-fast) var(--ease);box-shadow:var(--shadow-1);position:relative;overflow:hidden}
+.btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 100%);opacity:0;transition:opacity var(--dur-fast) var(--ease)}
+.btn:hover::before{opacity:1}
+.btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-2)}
+.btn:active{transform:translateY(-1px)}
+.btn-primary{background:var(--color-primary);color:#fff;border-color:var(--color-primary)}
+.btn-primary:hover{background:#C2185B}
+.btn-secondary{background:#fff;color:var(--color-text);border-color:rgba(0,0,0,.15)}
+.btn-secondary:hover{background:var(--color-bg);border-color:rgba(0,0,0,.2)}
+.btn-accent{background:var(--color-accent);color:#fff;border-color:var(--color-accent)}
+.btn-accent:hover{background:#D84315}
+.btn-ghost{background:#fff;border-color:rgba(0,0,0,.1);color:var(--color-text)}
+.btn-ghost:hover{background:var(--color-bg)}
+
+/* Product card */
+.product-card .card-body{display:grid;gap:16px}
+.product-card .sizes{display:flex;gap:10px;flex-wrap:wrap}
+.product-card .size-pill{border:1px solid rgba(0,0,0,.15);border-radius:var(--radius-pill);padding:8px 12px;font-size:.9rem;font-weight:500;cursor:pointer;transition:all var(--dur-fast) var(--ease);background:#fff}
+.product-card .size-pill:hover{background:var(--color-bg);border-color:rgba(0,0,0,.25);transform:scale(1.05)}
+.product-card .size-pill.active{background:var(--color-primary);color:#fff;border-color:var(--color-primary)}
+
+/* Header scroll animation */
+@keyframes logoShrink{from{transform:scale(1)}to{transform:scale(.9)}}
+.site-header[data-scrolled="true"] .logo-mark{animation:logoShrink var(--dur) var(--ease) forwards}
+
+/* Loading skeleton */
+.skeleton{background:linear-gradient(90deg,var(--color-bg) 25%,rgba(0,0,0,.1) 37%,var(--color-bg) 63%);background-size:400% 100%;animation:shimmer 1.5s ease-in-out infinite}
+@keyframes shimmer{0%{background-position:100% 50%}100%{background-position:0 50%}}

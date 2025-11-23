@@ -1,0 +1,14 @@
+/* Page-specific tweaks */
+.about-hero{min-height:40vh;background:linear-gradient(135deg,var(--color-primary),var(--color-lilac));display:grid;align-items:center}
+.hero.simple .hero-content{padding:60px 0}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr}}
+.milestones{display:grid;gap:12px}
+.milestone{display:flex;gap:12px;align-items:flex-start}
+.milestone .dot{width:10px;height:10px;border-radius:50%;background:var(--color-ink);margin-top:8px}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.team-card{position:relative;border-radius:16px;overflow:hidden}
+.team-card img{width:100%;height:100%;object-fit:cover}
+.team-card .overlay{position:absolute;inset:0;background:rgba(0,0,0,.25);opacity:0;color:#fff;display:grid;place-items:end;padding:12px;transition:opacity var(--dur) var(--ease)}
+.team-card:hover .overlay{opacity:1}
